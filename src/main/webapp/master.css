@@ -5,7 +5,7 @@ body {
     padding: 0;
 }
 
-#wrap {
+#wrap,#wrap2 {
     margin: 0 auto 0 auto;
     padding: 20px 0;
     border-left: 0px solid #000;
@@ -208,4 +208,10 @@ h1 {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+}
+
+.wall-container {
+    float:left;
+    width: 100%;
+    min-height: 600px;
 }

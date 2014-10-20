@@ -34,6 +34,18 @@ $('document').ready(function(){
     if($body.hasClass('magazine-covers')) {
         $('[data-imagelightbox]').imageLightbox();
     }
+
+    if($body.hasClass('wall')) {
+        var $wallContainer = $body.find('.wall-container');
+        $.getJSON( "/wall.json", function( data ) {
+            var items = [];
+            $.each( data.media, function( key, val ) {
+                var $wallItem = $('<img>');
+                $wallItem.attr('src', val.url);
+                $wallContainer.append($wallItem);
+            });
+        });
+    }
 });
 window.fbAsyncInit = function() {
     $('body').append($('<div id="fb-root"></div>'));
