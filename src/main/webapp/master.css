@@ -62,30 +62,6 @@ pre {
     border: 1px solid #ddd;
 }
 
-.work-wrapper {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-shadow: 2px 2px 2px #ddd;
-    -webkit-box-shadow: 2px 2px 2px #ccc;
-    -moz-box-shadow: 2px 2px 2px #ccc;
-    padding: 0px;
-    background-color: white;
-    display: block;
-    height: 206px;
-}
-
-.work-wrapper:hover {
-    box-shadow: 2px 2px 2px #999;
-    -webkit-box-shadow: 2px 2px 2px #999;
-    -moz-box-shadow: 2px 2px 2px #999;
-}
-
-.work-wrapper .work{
-    width: 100%;
-    height: 100%;
-}
-
 header {
     padding: 10px 0 20px 0;
     border-bottom: 1px solid #bbb;
@@ -201,19 +177,35 @@ h1 {
     width: 45%;
     margin: 10px;
     height: 400px;
+    /*box-shadow: 2px 2px 2px #ddd;*/
+    /*-webkit-box-shadow: 2px 2px 2px #ccc;*/
+    /*-moz-box-shadow: 2px 2px 2px #ccc;*/
+}
+
+.works .all-works .work:hover .work-image{
+    box-shadow: 2px 2px 2px #999;
+    -webkit-box-shadow: 2px 2px 2px #999;
+    -moz-box-shadow: 2px 2px 2px #999;
 }
 
 .works .all-works .work .work-image{
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
-    height: 100%;
+    height: 90%;
 }
 
 .works .all-works .work .work-title{
     display: block;
     width: 100%;
     height: 40px;
-    background-color: #888;
-    color: white;
-    font-size: 16px;
+    color: #000000;
+    font-size: 14px;
+    vertical-align: middle;
+    text-decoration: none;
+    padding-top: 10px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
