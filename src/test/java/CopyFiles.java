@@ -14,8 +14,8 @@ public class CopyFiles {
 
         String largePath = "/Users/yeshodhan/Documents/meeta/images/large";
         String thumbnailPath = "/Users/yeshodhan/Documents/meeta/images/thumbnails";
-        String targetDir = "/tmp/pics_river";
-        String prefix = "river";
+        String targetDir = "/tmp/pics_niyamgiri";
+        String prefix = "niyamgiri";
 
         FileOrganizer organizer = new FileOrganizer();
         organizer.copyOptimizedFiles(prefix, largePath, thumbnailPath, targetDir);
