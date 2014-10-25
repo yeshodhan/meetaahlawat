@@ -35,6 +35,15 @@ $('document').ready(function(){
         $('[data-imagelightbox]').imageLightbox();
     }
 
+    if($body.hasClass('editorials')) {
+        var $covers = $body.find('.covers');
+        $covers.isotope({
+            itemSelector: '.cover',
+            layoutMode: 'masonry'
+        });
+        $('[data-imagelightbox]').imageLightbox();
+    }
+
     if($body.hasClass('wall')) {
         var $wallContainer = $body.find('.wall-container');
         $.getJSON( "/wall.json", function( data ) {
