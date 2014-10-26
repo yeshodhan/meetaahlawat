@@ -298,6 +298,9 @@ center {
     width: 100%;
     text-align: center;
   }
+  header .left img {
+    width: 250px;
+  }
   header .right {
     float: left;
     width: 100%;
