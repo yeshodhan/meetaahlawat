@@ -55,6 +55,38 @@ $('document').ready(function(){
             });
         });
     }
+
+    if($body.hasClass('board')) {
+        var $wallContainer = $body.find('.wall-container');
+        $.getJSON( "/wall.json", function( data ) {
+            var items = [];
+            $.each( data.media, function( key, val ) {
+                var $wallItem = $('<a class="wall-item"></a>');
+                var $img = $('<img>');
+                $img.attr('src', val.thumbnail);
+                $wallItem.append($img);
+                var width = val.width;
+                var height = val.height;
+                var windowWidth = window.innerWidth;
+                var factor = 0.198;
+                var targetWidth = parseInt(windowWidth*factor,10);
+                var targetHeight = parseInt((targetWidth/width * height), 10);
+                $wallItem.attr('href',val.url);
+                $wallItem.css('width',targetWidth+'px');
+                $wallItem.css('height',targetHeight +'px');
+                $wallItem.css('margin','1px');
+                $wallContainer.append($wallItem);
+            });
+            $wallContainer.isotope({
+                itemSelector: '.wall-item',
+                layoutMode: 'masonry'
+            });
+            $container.isotope('unbindResize');
+            $('.wall-item').imageLightbox();
+        });
+    }
+
+
 });
 window.fbAsyncInit = function() {
     $('body').append($('<div id="fb-root"></div>'));
