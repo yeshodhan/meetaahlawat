@@ -12,7 +12,7 @@ $('document').ready(function(){
             autoplay: 8000,
             transition: 'fade',
             transitionSpeed: 1000,
-            imageCrop: true,
+            imageCrop: 'landscape',
             thumbnails:thumbnails,
             showCounter:false,
             pauseOnInteraction:true,
@@ -67,14 +67,14 @@ $('document').ready(function(){
                 $wallItem.append($img);
                 var width = val.width;
                 var height = val.height;
-                var windowWidth = window.innerWidth;
-                var factor = 0.198;
-                var targetWidth = parseInt(windowWidth*factor,10);
+                var containerWidth = $wallContainer.width();
+                var factor = 0.247;
+                var targetWidth = parseInt(containerWidth*factor,10);
                 var targetHeight = parseInt((targetWidth/width * height), 10);
                 $wallItem.attr('href',val.url);
                 $wallItem.css('width',targetWidth+'px');
                 $wallItem.css('height',targetHeight +'px');
-                $wallItem.css('margin','1px');
+                $wallItem.css('margin','0 1px 1px 0');
                 $wallContainer.append($wallItem);
             });
             $wallContainer.isotope({

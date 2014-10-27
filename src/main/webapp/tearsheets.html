@@ -16,7 +16,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
     <script src="resources/galleria/galleria-1.4.2.min.js"></script>
 </head>
-<body>
+<body class="published-works">
 <div id="wrap">
     <header role="main">
         <div class="left">
@@ -31,19 +31,25 @@
     </header>
 
     <h1>published works</h1>
-
     <center>
-        <table>
-            <tr>
-                <td><a href=ts_newsprint.html><img src=tearsheets_images/ts_1.jpg></a></td>
-                <td><a href=ts_dtecover.html><img src=tearsheets_images/ts_2.png></a></td>
-            </tr>
-            <tr>
-                <td><font face=arial size=2>editorial</font></td>
-                <td><font face=arial size=2>magazine covers</font></td>
-            </tr>
-            </font>
-        </table>
+        <div class="all-works">
+            <a class="work" href="ts_newsprint.html">
+                <div class="work-image" style="background-image: url('published_works/6.jpg');">
+
+                </div>
+                <div class="work-title">
+                    editorials
+                </div>
+            </a>
+            <a class="work" href="ts_dtecover.html">
+                <div class="work-image" style="background-image: url('ts_dtecover/dtec_14.jpg');">
+
+                </div>
+                <div class="work-title">
+                    magazine covers
+                </div>
+            </a>
+        </div>
     </center>
 
     <footer role="main">
