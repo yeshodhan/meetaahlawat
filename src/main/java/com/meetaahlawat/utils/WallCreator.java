@@ -29,6 +29,7 @@ public class WallCreator {
 
     public WallCreator(){
         wall_directories = new ArrayList<>();
+        wall_directories.add("solo");
         wall_directories.add("pics_amu");
         wall_directories.add("pics_camppl");
         wall_directories.add("pics_fatdat");

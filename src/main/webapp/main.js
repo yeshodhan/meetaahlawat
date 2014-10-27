@@ -63,7 +63,7 @@ $('document').ready(function(){
             $.each( data.media, function( key, val ) {
                 var $wallItem = $('<a class="wall-item"></a>');
                 var $img = $('<img>');
-                $img.attr('src', val.thumbnail);
+                $img.attr('data-original', val.thumbnail);
                 $wallItem.append($img);
                 var width = val.width;
                 var height = val.height;
@@ -76,6 +76,10 @@ $('document').ready(function(){
                 $wallItem.css('height',targetHeight +'px');
                 $wallItem.css('margin','0 1px 1px 0');
                 $wallContainer.append($wallItem);
+                $img.lazyload({
+                    effect : 'fadeIn',
+                    threshold: 200
+                });
             });
             $wallContainer.isotope({
                 itemSelector: '.wall-item',
