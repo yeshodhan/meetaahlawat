@@ -303,10 +303,10 @@ a:hover {
 #wrap,
 #wrap2 {
   margin: 0 auto 0 auto;
-  padding: 20px 0;
+  padding: 20px 80px;
   border-left: 0px solid #000;
   border-right: 0px solid #000;
-  width: 960px;
+  width: 100%;
   background-color: #fff;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -321,7 +321,7 @@ pre {
   background-repeat: no-repeat;
 }
 .carousel-container {
-  height: 648px;
+  height: 700px;
   width: 100%;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -329,9 +329,6 @@ pre {
   padding: 0 5px;
   background-color: white;
   margin: 20px 0;
-}
-.carousel-container[data-thumbnails="false"] {
-  height: 585px;
 }
 #galleria {
   width: 100%;
@@ -532,7 +529,7 @@ center {
 }
 .works.published-works .all-works .work,
 .published-works.published-works .all-works .work {
-  width: 30%;
+  width: 282px;
   height: 444px;
 }
 .works.published-works .all-works .work .work-image,
