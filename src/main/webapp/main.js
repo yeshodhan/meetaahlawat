@@ -15,7 +15,7 @@ $('document').ready(function () {
             autoplay: 8000,
             transition: 'fade',
             transitionSpeed: 1000,
-            imageCrop: 'landscape',
+            imageCrop: false,
             thumbnails: thumbnails,
             showCounter: false,
             pauseOnInteraction: true,
